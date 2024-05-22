@@ -1,0 +1,15 @@
+package exercise.daytime;
+import jakarta.annotation.PostConstruct;
+import lombok.Getter;
+
+@Getter
+public class Night implements Daytime {
+    private final String name = "night";
+
+    // BEGIN
+    @PostConstruct
+    public void postConstruct() {
+        System.out.println("Bean Night was created");
+    }
+    // END
+}
