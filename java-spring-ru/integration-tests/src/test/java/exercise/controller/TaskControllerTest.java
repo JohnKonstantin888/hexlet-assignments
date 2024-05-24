@@ -49,6 +49,7 @@ class ApplicationTest {
 
     @BeforeEach
     public void setUp() {
+        taskRepository.deleteAll();
         task = new Task()
                 .setTitle(faker.lorem().word())
                 .setDescription(faker.lorem().word());
