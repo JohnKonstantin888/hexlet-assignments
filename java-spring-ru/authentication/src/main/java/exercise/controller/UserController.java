@@ -28,7 +28,7 @@ public class UserController {
     @Autowired
     private UserMapper userMapper;
 
-    @GetMapping(path = "")
+    @GetMapping(path = "/all")
     public List<UserDTO> index() {
         var users = userRepository.findAll();
         return users.stream()
